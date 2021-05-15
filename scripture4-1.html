@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <title>Template</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=divice-width, initial-scal=1">
+    <link rel="stylesheet" href="styles.css"/>
+    <script>
+        /* Defining Table 
+        INPUT: A person's name
+        PROCESSING: Create a verse of scripture for that person 
+        OUTPUT: The Scripture 
+        */
+
+        function applyScripture() {
+            //INPUT
+            let firstname = document.getElementById('firstname').value;
+            let secondname = document.getElementById('lastname').value;
+             //PROCESSING
+            let scripture = "And it came to pass that I, " + firstname + " " + secondname + 
+            " said unto my father: I will go and do the things which the Lord " +
+            "hath commanded, for I know that the Lord giveth no commandments " +
+            "unto the children of men, save he shall prepare a way for them " +
+            "that they may accomplish the thing which he commandeth them. " +
+            "(1st Nephi 3:7)";
+            //OUTPUT
+            document.getElementById('output').innerHTML 
+            = scripture;
+        }
+    </script>
+    </head>
+    <body>
+        <header>
+            <h1> Week 4: Add Two Numbers</h1>
+            <h2> Megan E. Jenkins </h2>
+        </header>
+        <main>
+            <h3>Your Personal Scripture</h3>
+            <label> Enter First Name: <input type="text" id="firstname"></label>
+            <label> Enter Last Name: <input type="text" id="lastname"></label>
+            <label><button onclick="applyScripture()">Scripture</button></label>
+            <hr>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+            &copy;2021 &bull; Megan E. Jenkins &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+    </body>
+</html>
