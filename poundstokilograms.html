@@ -15,10 +15,10 @@
         function convertpoundstokilograms() {
             //INPUT
             let p = parseFloat(document.getElementById('pounds').value);
-            let k= kilograms
              //PROCESSING
-            let k = p * 0.45359237;
-            Math.round(k, 1); 
+            let x = p * 0.45359237; 
+            var n = x
+            var k = x.toFixed(0)
             //OUTPUT
             document.getElementById('output').innerHTML 
             = k;
@@ -33,7 +33,7 @@
         <main>
             <h3> Convert Pounds to Kilograms</h3>
             <label> Enter Pounds: <input type="text" id="pounds"></label>
-            <label><button onclick="Kilograms()"> Convert</button></label>
+            <label><button onclick="convertpoundstokilograms()"> Convert</button></label>
             <hr>
             <p><span id="output"></span></p>
         </main>
