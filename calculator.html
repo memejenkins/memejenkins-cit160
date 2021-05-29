@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <title>Calculator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=divice-width, initial-scal=1">
+    <link rel="stylesheet" href="styles.css"/>
+    <script>
+         /* Defining Table 
+        INPUT: The numbers they want to check
+        PROCESSING: Determine if they are right
+        OUTPUT: Correct or incorrect 
+        */
+
+        function mathskillstest() {
+            //INPUT
+            let x = parseFloat(document.getElementById('number1').value);
+            let sign = (document.getElementById('sign').value)
+            let y= parseFloat(document.getElementById('number2').value);
+            let answer= (document.getElementById('answer').value);
+            let answerkey = 0;
+             //PROCESSING
+            switch (sign) {
+                case '+':
+                    answerkey= x + y;
+                    break;
+                case '-':
+                    answerkey= x - y;
+                    break;
+                case '*':
+                    answerkey= x * y ;
+                    break;
+                case '/':
+                    answer= x / y;
+                    break;
+                default:
+                    answerkey=0; 
+                    alert ('Not a valid answer!'); 
+                    break;
+            }
+            if (answerkey == answer) {
+                message = "You are Correct! 🏆";
+            }
+            else {
+                message = "Incorrect 😢 Please try again."
+                }
+
+
+            //OUTPUT
+            document.getElementById('output').innerHTML =
+            message;
+        }
+    </script>
+    </head>
+    <body>
+        <header>
+            <h1>Math Check</h1>
+            <h2> Megan E. Jenkins </h2>
+        </header>
+        <main>
+            <h3> Check your Math Here </h3>
+            <label> Enter Your First Number: <input type="text" id="number1"></label>
+            <label>Enter Your Operator: <input type="text" id="sign"></label>
+            <label> Enter Your Second Number: <input type="text" id="number2"></label>
+            <label> Enter Your Answer: <input type="text" id="answer"></label>
+            <label><button onclick="mathskillstest()">Here we go!</button></label>
+            <hr>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+            &copy;2021 &bull; Megan E. Jenkins &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+    </body>
+</html>

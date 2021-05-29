@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <title>Shoes</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=divice-width, initial-scal=1">
+    <link rel="stylesheet" href="styles.css"/>
+    <script>
+         /* Defining Table 
+          /*Input: The Weather
+         *Processing: Determine which shoes to Wear 
+         *Output: A message to determine which shoes go with the Weather type. */
+         function weather() {
+            let weather = document.getElementById("weather").value
+            let shoes = document.getElementById("shoes")
+            if (weather == "hot") {
+                shoes.innerHTML = "Wear sandals"
+            } else if (weather == "snow") {
+                shoes.innerHTML = "Wear boots"
+            } else if (weather == "rain") {
+                shoes.innerHTML = "Wear golashes"
+            } else {
+                shoes.innerHTML = "Pick any shoes"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    What is Your Current Weather? <br> Weather <input type="text" id="weather">
+    <button type="button" onclick="weather()">weather</button>
+    <div id="shoes"></div>
+        </main>
+        <footer>
+            &copy;2021 &bull; Megan E. Jenkins &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+    </body>
+</html>
