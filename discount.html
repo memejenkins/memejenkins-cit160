@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <title>Trying to increase Sales</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=divice-width, initial-scal=1">
+    <link rel="stylesheet" href="styles.css"/>
+    <script>
+         /* Defining Table 
+        INPUT: Take the customer subtotal, see if they qualify for discount; add tax
+        PROCESSING: If customer spendes more than $50, they get a 10% discount, add .06% tax.
+        OUTPUT: Total Price over all
+        */
+
+        function discount() {
+            //INPUT
+            let subtotal = parseFloat(document.getElementById('price').value);
+            let dayOfWeek = new Date().getDay();
+            //Processing
+            if (subtotal > 50 && dayOfWeek == 2 || dayOfWeek == 3); {
+                subtotal -= subtotal * 0.1;
+                total = (subtotal * 1.06).toFixed(2);
+            }
+            //Output
+            {
+                document.getElementById("output").innerHTML = total; 
+            }
+        }
+    </script>
+    </head>
+    <body>
+        <header>
+            <h1> Discount</h1>
+            <h2> Megan E. Jenkins </h2>
+        </header>
+        <main>
+            <h3> Find out if you get a discount </h3>
+            <label> Enter Subtotal Here: <input type="text" id="price"></label>
+            <label><button onclick="discount()"> Total Purchase Price</button></label>
+            <hr>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+            &copy;2021 &bull; Megan E. Jenkins &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+    </body>
+</html>

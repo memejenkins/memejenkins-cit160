@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <!-- Do I sleep in? Or wake up?-->
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=divice-width, initial-scal=1">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Template</title>
+    <script>
+        /* Defining Table
+         * Input:shouldn't be any
+         * Processing:The computer will determine the day and month it is
+         * Output:Should tell you if you can sleep in or not
+         */
+        function alarm(){
+        /* computer computes the date
+         */
+        var now = new Date();
+        var month = now.getMonth();
+        var dayOfMonth = now.getDate();
+        var dayOfWeek = now.getDay();
+        /* computer determines the day
+         */
+        if (month == 0 && dayOfMonth == 1) {
+            message = "You can sleep in, it's a New Year!";
+        } else if (month == 6 && dayOfMonth == 4) {
+            message = "Sleep in it's Independence Day!";
+        } else if (month == 11 && dayOfMonth == 25) {
+            message = "Sleep in, Merry Christmas!";
+        } else if (dayOfWeek == 6 || dayOfWeek == 0) {
+            message = "Sleep in and enjoy your weekend.";
+        } else {
+            message="You can't sleep in today."
+        }
+            document.getElementById("enter").innerHTML = message;
+        }
+    </script>
+</head>
+
+<body>
+    Push snooze button to see<br /> if you can sleep in or not<br />
+    <button type="button" onclick="alarm()">Snooze</button>
+
+    <p id="enter"></p>
+</body>
+
+</html>
