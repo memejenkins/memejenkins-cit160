@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Template</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=divice-width, initial-scal=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      /* Defining Table 
+       INPUT: The numbers they want to check
+       PROCESSING: Determine if they are right
+       OUTPUT: Correct or incorrect 
+       */
+      function SumofOddNumbers() {
+        //INPUT
+        //PROCESSING
+        let x = parseInt(document.getElementById("sum").value);
+        let sum = 0;
+        for (let n = 1; n <= x; n += 2) {
+          sum += n;
+        }
+        //OUTPUT
+        document.getElementById("output").innerHTML = sum;
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Adding Odd Numbers</h1>
+      <h2>Megan E. Jenkins</h2>
+    </header>
+    <main>
+      <h3>Ready?</h3>
+      <label> Enter the Last Number: <input type="text" id="sum" /></label>
+      <label><button onclick="SumofOddNumbers()">Here we go!</button></label>
+      <hr />
+      <p><span id="output"></span></p>
+    </main>
+    <footer>
+      &copy;2021 &bull; Megan E. Jenkins &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+  </body>
+</html>
