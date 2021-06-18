@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>Template</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=divice-width, initial-scal=1" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>5 Times Table</h1>
+        <h2>Megan E. Jenkins</h2>
+    </header>
+    <main>
+        <h3>5 Times Table</h3>
+        <label><button onclick="fiveTimes()">Here we go!</button></label>
+        <hr />
+        <p><span id="multi"></span></p>
+    </main>
+    <footer>
+        &copy;2021 &bull; Megan E. Jenkins &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        /* Defining Table 
+         INPUT: 1-12
+         PROCESSING: multiplying 5 with each number up to 5 
+         OUTPUT: The 5 times table 
+         */
+        let output = 0;
+        let table = "";
+        function fiveTimes() {
+            //INPUT
+            //PROCESSING;
+
+            for (i = 1; i <= 12; i++) {
+                output = i * 5;
+                table += "5 x " + i + " = " + output + "<br>";
+            }
+            //OUTPUT
+            document.getElementById("multi").innerHTML = table;
+
+        }
+    </script>
+</body>
+
+</html>
