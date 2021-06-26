@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <title>Wind Chill coding</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=divice-width, initial-scal=1">
+    <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+    <header>
+        <h1>Template</h1>
+        <h2>Megan E. Jenkins</h2>
+    </header>
+    <main>
+        <h3>Wind Chill Calculator</h3>
+        <label> Enter Temperature Here <input type="text" id="temperature" /></label>
+        <label> Enter Wind Speed Here <input type="text" id="Windspeed" /></label>
+        <label><button onclick="doInputOutput()">Wind Chill</button></label>
+        <hr />
+        <p><span id="output"></span></p>
+    </main>
+    <footer>
+        &copy;2021 &bull; Megan E. Jenkins &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    ------------------------
+    <script>
+        /* Defining Table 
+         /*Input:Get the Windchill
+        *Processing: Table get temperature and Wind speed
+        *Output:WIndchill
+         */
+        function doInputOutput() {
+            let temperature = parseFloat(document.getElementById('temperature').value);
+            let windspeed = parseFloat(document.getElementById('WindSpeed').value);
+
+            let message = windChill(temperature, windspeed);
+
+            document.getElementById('output').innerHTML = message;
+        }
+
+        function windChill(temperature, windspeed) {
+            let f = temperature
+            let s = windspeed
+            let wc = 35.74 + 0.6215 * f - 35.75 * Math.pow(s, 0.16) + 0.4275 * f * Math.pow(s, 0.16);
+
+            return wc;
+        }
+
+    </script>
+</body>
+
+</html>
+
+</html>
